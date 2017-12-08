@@ -1,4 +1,7 @@
 class Admin::CategoriesController < ApplicationController
+  # to request authentication first before user can access this resource
+  # before_filter :authorize
+
   def index
     @category = Category.all
   end
