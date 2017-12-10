@@ -1,6 +1,11 @@
 class CartsController < ApplicationController
 
   def show
+     if cookies[:cart] == '{}' || cookies[:cart] == nil
+       render 'show_empty_cart'
+     else
+       render 'show'
+     end
   end
 
   def add_item
