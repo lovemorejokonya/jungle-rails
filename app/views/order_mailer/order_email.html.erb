@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thanks for your eorder, <%= @order.email %></h1>
+    <p>
+      You have successfully placed your order,
+      your order id is: <%= @order.id %>.<br>
+    </p>
+    <p>
+      To view your recent order, just follow this link: <%= @url %>.
+    </p>
+    <p>Thanks for buying and have a great day!</p>
+  </body>
+</html>
