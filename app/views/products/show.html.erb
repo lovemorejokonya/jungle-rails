@@ -1,7 +1,7 @@
 <section class="products-show">
 
   <header class="page-header">
-    <h1><%= link_to @product.category.name, @product.category %> &raquo; <%= @product.name %></h1>
+    <h1><%= link_to @product.category.name, @product.category %> &raquo; <%= @product.name %>  <%= @product.id %></h1>
   </header>
 
   <article class="product-detail">
@@ -30,10 +30,19 @@
 
   <h4> Write a review </h4>
   <%= form_for [@product, @review] do |f| %>
-
+  <% if f.object.errors.any? %>
+  <div class="alert alert-danger">
+    <strong>The following errors prevented saving:</strong>
+    <ul>
+      <% f.object.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
   <p><%= f.text_area :description %></p>
   <p>Rating: <%= f.select(:rating, [1, 2, 3, 4, 5]) %></p>
-  <%= f.hidden_field :product_id, :value => @product.id%>
+  <%= f.hidden_field :product_id, :value => @product.id %>
   <p><%= f.submit "Submit" %></p>
   <% end %>
 

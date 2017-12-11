@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
     @product = Product.find params[:id]
     @review = Review.new
     @reviews = Review.where(product_id: @product.id).order(updated_at: :desc)
-    # @user = current_user
+    @user = current_user
   end
 
 end
