@@ -53,6 +53,11 @@
       <% @reviews.each do |review| %>
       <dl class="dl-horizontal">
         <dt>
+          <% if show_delete_button?((User.find_by_id(review.user_id).id)) %>
+          <span class='delete-tweet-button'>
+            <%= link_to 'Delete', product_review_path([@product.id.to_i], [review.id.to_i]), method: :delete %>
+          </span>
+          <% end %>
 
         User: </dt>
         <dd><%= User.find_by_id(review.user_id).name %>

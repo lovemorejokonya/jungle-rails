@@ -12,6 +12,15 @@ class ApplicationController < ActionController::Base
     redirect_to '/login' unless current_user
   end
 
+  def show_delete_button?(userID)
+    if current_user && current_user[:id] == userID
+     true
+   else
+    false
+  end
+  end
+  helper_method :show_delete_button?
+
   private
 
   def cart
