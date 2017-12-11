@@ -28,4 +28,27 @@
 
   </article>
 
+  <article class="product-reviews">
+    <h4> Reviews </h4>
+    <div class="col-sm-12">
+      <% @reviews.each do |review| %>
+      <dl class="dl-horizontal">
+        <dt>
+
+        User: </dt>
+        <dd><%= User.find_by_id(review.user_id).name %>
+        </dd>
+        <dt>Rating: </dt>
+        <dd> <%= pluralize(review.rating, 'star') %> </dd>
+        <% if review.description != ''%>
+        <dt>Description: </dt>
+        <dd> <%= review.description %></dd>
+        <% end %>
+        <dt>Time: </dt>
+        <dd><%= review.updated_at %></dd>
+      </dl>
+      <% end %>
+    </div>
+  </article>
+
 </section>
