@@ -134,3 +134,106 @@ cat3.products.create!({
 
 
 puts "DONE!"
+
+## USER
+
+puts "Re-creating User ..."
+
+User.destroy_all
+
+User.create!({
+  name: 'test',
+  email: 'test@test.com',
+  password_digest: 'test'
+})
+
+User.create!({
+  name: 'test2',
+  email: 'test2@test.com',
+  password_digest: 'test2'
+})
+
+User.create!({
+  name: 'test3',
+  email: 'test3@test.com',
+  password_digest: 'test3'
+})
+
+puts "DONE!"
+
+## REVIEWS
+
+puts "Re-creating Reviews ..."
+
+Review.destroy_all
+
+Review.create!({
+  description: Faker::Hipster.paragraph(4),
+  rating: (1 + rand(5)).to_i,
+  product_id: (1 + rand(12)).to_i,
+  user_id: (1 + rand(3)).to_i
+})
+
+Review.create!({
+  description: Faker::Hipster.paragraph(4),
+  rating: (1 + rand(5)).to_i,
+  product_id: (1 + rand(12)).to_i,
+  user_id: (1 + rand(3)).to_i
+})
+Review.create!({
+  description: Faker::Hipster.paragraph(4),
+  rating: (1 + rand(5)).to_i,
+  product_id: (1 + rand(12)).to_i,
+  user_id: (1 + rand(3)).to_i
+})
+Review.create!({
+  description: Faker::Hipster.paragraph(4),
+  rating: (1 + rand(5)).to_i,
+  product_id: (1 + rand(12)).to_i,
+  user_id: (1 + rand(3)).to_i
+})
+Review.create!({
+  description: Faker::Hipster.paragraph(4),
+  rating: (1 + rand(5)).to_i,
+  product_id: (1 + rand(12)).to_i,
+  user_id: (1 + rand(3)).to_i
+})
+Review.create!({
+  description: Faker::Hipster.paragraph(4),
+  rating: (1 + rand(5)).to_i,
+  product_id: (1 + rand(12)).to_i,
+  user_id: (1 + rand(3)).to_i
+})
+Review.create!({
+  description: Faker::Hipster.paragraph(4),
+  rating: (1 + rand(5)).to_i,
+  product_id: (1 + rand(12)).to_i,
+  user_id: (1 + rand(3)).to_i
+})
+Review.create!({
+  description: Faker::Hipster.paragraph(4),
+  rating: (1 + rand(5)).to_i,
+  product_id: (1 + rand(12)).to_i,
+  user_id: (1 + rand(3)).to_i
+})
+Review.create!({
+  description: Faker::Hipster.paragraph(4),
+  rating: (1 + rand(5)).to_i,
+  product_id: (1 + rand(12)).to_i,
+  user_id: (1 + rand(3)).to_i
+})
+Review.create!({
+  description: Faker::Hipster.paragraph(4),
+  rating: (1 + rand(5)).to_i,
+  product_id: (1 + rand(12)).to_i,
+  user_id: (1 + rand(3)).to_i
+})
+Review.create!({
+  description: Faker::Hipster.paragraph(4),
+  rating: (1 + rand(5)).to_i,
+  product_id: (1 + rand(12)).to_i,
+  user_id: (1 + rand(3)).to_i
+})
+
+
+puts "DONE!"
