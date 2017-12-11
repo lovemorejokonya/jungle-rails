@@ -1,6 +1,8 @@
 class ReviewsController < ApplicationController
+
+  before_filter :authorize
+
   def create
-    # raise "Yay, I'm here!"
 
     @product = Product.find params[:product_id]
     @review = Review.new(review_params)
@@ -16,4 +18,5 @@ class ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(:description, :rating, :product_id)
   end
+
 end
