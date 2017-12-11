@@ -1,8 +1,9 @@
 <% quantity = product['quantity'].to_i %>
+<% @cart_total = 0 %>
 
 <% if product %>
   <% item_total = product.price_cents * quantity %>
-  <% @cart_total += item_total %>
+  <% @cart_total = @cart_total+item_total %>
 
   <tr>
     <td>
