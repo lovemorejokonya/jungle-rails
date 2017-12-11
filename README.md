@@ -2,6 +2,13 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Final Product
+!["Screenshot of the products home page"](https://github.com/lovemorejokonya/jungle-rails/blob/master/screen_shots/products.png)
+!["Screenshot of the order cart"](https://github.com/lovemorejokonya/jungle-rails/blob/master/screen_shots/cart.png)
+!["Screenshot of the checkout page"](https://github.com/lovemorejokonya/jungle-rails/blob/master/screen_shots/checkout.png)
+!["Screenshot of the admin products page"](https://github.com/lovemorejokonya/jungle-rails/blob/master/screen_shots/admin_products)
+
+
 
 ## Setup
 
